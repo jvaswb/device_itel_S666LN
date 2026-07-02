@@ -351,11 +351,10 @@ ro.soc.model=MT6789V/CD
 ro.vendor.mtk_tee_gp_support=1
 ro.vendor.mtk_trustonic_tee_support=1
 
-# Wifi
-persist.vendor.mtk_wfc_support=1
-ro.vendor.mtk_tb_wifi_3g_mode=0
-ro.vendor.wfd.dummy.enable=0
-ro.vendor.wfd.iframesize.level=0
+# USB
+vendor.usb.controller=musb-hdrc
+
+# Wi-Fi
 ro.vendor.wifi.sap.concurrent.iface=ap1
 ro.vendor.wifi.sap.interface=ap0
 ro.vendor.wlan.chrdev=wmt_chrdev_wifi

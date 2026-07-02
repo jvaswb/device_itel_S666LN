@@ -236,7 +236,6 @@ PRODUCT_PACKAGES += \
     init.modem.rc \
     init.mt6789.power.rc \
     init.mt6789.rc \
-    init.mt6789.usb.rc \
     init.mtkgki.rc \
     init.project.rc \
     init.recovery.usb.rc \
@@ -484,12 +483,12 @@ PRODUCT_COPY_FILES += \
 
 # USB
 $(call soong_config_set_bool,android_hardware_mediatek_usb,audio_accessory_supported,true)
-
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.mediatek \
-    android.hardware.usb.gadget-service.mediatek
+    android.hardware.usb.gadget-service.mediatek \
+    init.mt6789.usb.rc
 
-# Userdata
+# userdata
 PRODUCT_FS_COMPRESSION := 1
 
 # Speed profile services and wifi-service to reduce RAM and storage.
