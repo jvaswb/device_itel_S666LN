@@ -89,7 +89,7 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('liblog.so'),
     'vendor/lib64/librt_extamp_intf.so': blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
-    'vendor/lib64/mt6789/libmnl.so': blob_fixup()
+    'vendor/lib64/libmnl_mtk.so': blob_fixup()
         .add_needed('libcutils.so'),
     'vendor/lib64/mt6789/libneuralnetworks_sl_driver_mtk_prebuilt.so': blob_fixup()
         .clear_symbol_version('AHardwareBuffer_allocate')
@@ -136,6 +136,8 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace(r'[ \t]*interface vendor\.mediatek\.hardware\.engineermode.*\n', ''),
     ('vendor/lib64/libcodec2_mtk_venc.so', 'vendor/lib64/libcodec2_mtk_vdec.so'): blob_fixup()
         .replace_needed('libformatter.so', 'libformatter_mtk.so'),
+     ('vendor/bin/mnld', 'vendor/lib64/libwpfa.so'): blob_fixup()
+        .replace_needed('libmnl.so', 'libmnl_mtk.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
