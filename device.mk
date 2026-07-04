@@ -472,7 +472,9 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/millennium \
-    hardware/millennium/libtranlog
+    hardware/millennium/libtranlog \
+    hardware/google/pixel/pixelstats \
+    hardware/google/pixel/power-libperfmgr
 
 # Thermal
 PRODUCT_PACKAGES += \
