@@ -134,6 +134,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libjni_shim.so'),
     'vendor/etc/init/em_hidl_user.rc': blob_fixup()
         .regex_replace(r'[ \t]*interface vendor\.mediatek\.hardware\.engineermode.*\n', ''),
+    ('vendor/lib64/libcodec2_mtk_venc.so', 'vendor/lib64/libcodec2_mtk_vdec.so'): blob_fixup()
+        .replace_needed('libformatter.so', 'libformatter_mtk.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
