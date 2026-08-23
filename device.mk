@@ -524,6 +524,7 @@ $(call soong_config_set,wpa_supplicant_8,board_wlan_mediatek_stability,true)
 $(call soong_config_set_bool,mediatek_wifi_hal,use_pre_u_qpr2_struct,true)
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
+    wlan_assistant \
     wpa_supplicant \
     hostapd
 
